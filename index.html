@@ -9,8 +9,8 @@
 <meta property="og:url"         content="https://boda-nancy-y-vladimir.vercel.app/">
 <meta property="og:title"       content="💌 Nancy &amp; Vladimir · 20 · Febrero · 2027">
 <meta property="og:description" content="Nos casamos y queremos que estés ahí. Una celebración en Morelia, Michoacán — Sábado 20 de Febrero 2027 · Abre tu invitación ✉️">
-<meta property="og:image"       content="https://boda-nancy-y-vladimir.vercel.app/og-image.jpg?v=nv1">
-<meta property="og:image:secure_url" content="https://boda-nancy-y-vladimir.vercel.app/og-image.jpg?v=nv1">
+<meta property="og:image"       content="https://boda-nancy-y-vladimir.vercel.app/og-image.jpg?v=nv2sello">
+<meta property="og:image:secure_url" content="https://boda-nancy-y-vladimir.vercel.app/og-image.jpg?v=nv2sello">
 <meta property="og:image:type"  content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -19,7 +19,7 @@
 <meta name="twitter:card"        content="summary_large_image">
 <meta name="twitter:title"       content="💌 Nancy &amp; Vladimir · 20 · Febrero · 2027">
 <meta name="twitter:description" content="Nos casamos y queremos que estés ahí. Una celebración en Morelia, Michoacán — Sábado 20 de Febrero 2027 ✉️">
-<meta name="twitter:image"       content="https://boda-nancy-y-vladimir.vercel.app/og-image.jpg?v=nv1">
+<meta name="twitter:image"       content="https://boda-nancy-y-vladimir.vercel.app/og-image.jpg?v=nv2sello">
 <script>if('scrollRestoration' in history){history.scrollRestoration='manual';}window.scrollTo(0,0);</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -229,18 +229,17 @@ body{
   position:relative;
   height:100vh;height:100dvh;
   min-height:600px;
-  display:flex;align-items:flex-end;justify-content:center;
-  padding-bottom:64px;
+  display:flex;align-items:center;justify-content:center;
+  padding-bottom:0;
 }
 .hero-bg{
   position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse 120% 80% at 50% 0%,#FDF6E9 0%,#F7E7CE 48%,#EAD5B2 100%);
+  background:url('hero-marco.jpg') center center/cover no-repeat;
   background-color:var(--surface);
 }
 .hero-veil{
   position:absolute;inset:0;
-  background:linear-gradient(to bottom,rgba(253,252,252,0) 15%,rgba(253,252,252,.55) 55%,var(--bg) 100%);
+  background:linear-gradient(to bottom,rgba(253,252,252,0) 0%,rgba(253,252,252,0) 76%,rgba(253,252,252,.72) 92%,var(--bg) 100%);
 }
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 24px}
 .hero-bride{
@@ -608,6 +607,291 @@ body{font-weight:500}
 
 .padrino-rol{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);opacity:.85;margin-top:6px;}
 .padrinos-ticker{min-height:104px}
+
+/* ══════════════════════════════════════════════════════════
+   ACABADO PREMIUM · fondos de tinta, satinado vivo y brillos
+   (bloque final: gana la cascada a las reglas de arriba)
+   ══════════════════════════════════════════════════════════ */
+
+/* ── CSS huerfano de las secciones eliminadas ── */
+#noninos,.nn-icon,.nn-note,.historia-txt,.gal-wrap,.gal-carousel,.gal-slide,.gal-dots{display:none!important}
+
+/* ── 1. FONDOS DE TINTA POR SECCION ───────────────────────── */
+#countdown,#ubicacion,#dresscode,#album,#rsvp,#regalos{
+  position:relative;z-index:0;isolation:isolate;
+  background:var(--bg)!important;
+  background-image:none!important;
+  overflow:hidden;
+}
+#countdown::before,#ubicacion::before,#dresscode::before,
+#album::before,#rsvp::before,#regalos::before{
+  content:'';position:absolute;inset:0;z-index:-2;
+  background-repeat:no-repeat;background-position:center center;background-size:cover;
+  opacity:.42;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 110px,#000 calc(100% - 110px),transparent 100%);
+          mask-image:linear-gradient(to bottom,transparent 0,#000 110px,#000 calc(100% - 110px),transparent 100%);
+  pointer-events:none;
+}
+#countdown::before{background-image:url('fondo1.jpg')}
+#ubicacion::before{background-image:url('fondo2.jpg');opacity:.48}
+#dresscode::before{background-image:url('fondo3.jpg');opacity:.34}
+#album::before   {background-image:url('fondo1.jpg');opacity:.46;transform:scaleY(-1)}
+#rsvp::before    {background-image:url('fondo2.jpg');opacity:.32;transform:scaleX(-1)}
+#regalos::before {background-image:url('fondo3.jpg');opacity:.3;transform:scale(-1,-1)}
+
+/* velo claro: el texto SIEMPRE gana al fondo */
+#countdown::after,#ubicacion::after,#dresscode::after,
+#album::after,#rsvp::after,#regalos::after{
+  content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse at center,
+    rgba(253,252,252,.66) 0%,rgba(253,252,252,.40) 62%,rgba(253,252,252,.16) 100%);
+}
+/* los ornamentos de transicion ya no pintan champan plano */
+.ornament--s2b,.ornament--b2s{background:var(--bg)!important}
+
+/* ── 2. SATINADO PREMIUM · la superficie champan respira ──── */
+.satin{
+  position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden;
+}
+.satin::before{
+  content:'';position:absolute;top:-30%;left:0;
+  width:46%;height:160%;
+  background:linear-gradient(100deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,251,242,.30) 38%,
+    rgba(252,244,228,.62) 50%,
+    rgba(255,251,242,.30) 62%,
+    rgba(255,255,255,0) 100%);
+  transform:translateX(-160%) skewX(-14deg);
+  animation:satinSweep 9s cubic-bezier(.45,0,.25,1) infinite;
+}
+/* desfase por seccion: nunca brillan todas a la vez */
+#ubicacion .satin::before{animation-delay:1.6s}
+#dresscode .satin::before{animation-delay:3.2s}
+#album     .satin::before{animation-delay:4.8s}
+#rsvp      .satin::before{animation-delay:6.4s}
+#regalos   .satin::before{animation-delay:2.4s}
+@keyframes satinSweep{
+  0%    {transform:translateX(-160%) skewX(-14deg)}
+  58%   {transform:translateX(320%)  skewX(-14deg)}
+  100%  {transform:translateX(320%)  skewX(-14deg)}
+}
+
+/* las tarjetas tambien dejan de ser planas: satinado propio y borde de luz */
+.cd-box,.loc-card,.gift-card,.album-qr-wrap,.rsvp-form-wrap,.msg-card{
+  position:relative;overflow:hidden;
+  background-image:linear-gradient(145deg,#ffffff 0%,#FFFDF8 46%,#FBF2E2 100%);
+  border:1px solid rgba(179,45,0,.10);
+}
+.cd-box::after,.loc-card::after,.gift-card::after{
+  content:'';position:absolute;top:0;left:0;width:55%;height:100%;
+  background:linear-gradient(100deg,transparent 0%,rgba(252,244,228,.55) 50%,transparent 100%);
+  transform:translateX(-170%) skewX(-16deg);
+  animation:satinSweep 7.5s cubic-bezier(.45,0,.25,1) infinite;
+  pointer-events:none;
+}
+.cd-box:nth-child(2)::after{animation-delay:.35s}
+.cd-box:nth-child(3)::after{animation-delay:.7s}
+.cd-box:nth-child(4)::after{animation-delay:1.05s}
+.loc-card:nth-of-type(2)::after{animation-delay:1.4s}
+
+/* ── 3. TEXTOS ROJIZOS CON PROFUNDIDAD (ya no planos) ─────── */
+.script-title,.footer-names,.quote-sig,.loc-name{
+  background:linear-gradient(135deg,
+    #8f2200 0%,#b32d00 32%,#c9451a 48%,#b32d00 64%,#8f2200 100%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+  background-size:220% 100%;
+  animation:inkShift 11s ease-in-out infinite;
+  /* sombra sutil para que el gradiente no lo aplane */
+  filter:drop-shadow(0 1px 1px rgba(143,34,0,.16));
+  padding-bottom:.06em;            /* el clip no corta las colas de la cursiva */
+}
+@keyframes inkShift{
+  0%,100%{background-position:0% 50%}
+  50%    {background-position:100% 50%}
+}
+/* los eyebrow y datos chicos quedan SOLIDOS: legibilidad primero */
+.eyebrow,.padrinos-eyebrow,.fecha-label,.loc-sub,.loc-city,
+.cd-lbl,.itin-time,.qr-label,.dc-avoid-label,.rsvp-deadline,.dc-fig-label{
+  -webkit-text-fill-color:currentColor;color:var(--accent);
+}
+
+/* ── 4. HERO · nombres al centro del marco + brillo fino ──── */
+.hero-content{
+  position:relative;z-index:2;text-align:center;padding:0 34px;
+  max-width:330px;margin:0 auto;
+}
+.hero-bride,.hero-groom{font-size:clamp(56px,17vw,74px)}
+.hero-amp{font-size:34px}
+/* el brillo: banda clara y estrecha que cruza el nombre, lenta y suave */
+.hero-bride,.hero-groom{
+  background:linear-gradient(100deg,
+    #8f2200 0%,#9e2600 34%,
+    #d9743f 46%,#f0b98a 50%,#d9743f 54%,
+    #9e2600 66%,#8f2200 100%);
+  -webkit-background-clip:text;background-clip:text;
+  background-size:260% 100%;
+  background-position:120% 50%;
+  animation:nameShine 6.5s ease-in-out infinite;
+  filter:drop-shadow(0 2px 3px rgba(143,34,0,.18));
+  padding-bottom:.08em;
+}
+.hero-groom{animation-delay:.5s}
+@keyframes nameShine{
+  0%   {background-position:120% 50%}
+  55%  {background-position:-20% 50%}
+  100% {background-position:-20% 50%}
+}
+/* el amp y el hint sobre el centro claro del marco */
+.hero-amp{
+  color:var(--accent);
+  -webkit-text-fill-color:var(--accent);
+  opacity:.9;
+}
+.scroll-hint-txt{color:var(--dark)}
+
+/* ── 5. DRESS CODE · dibujos de vestimenta ────────────────── */
+.dc-figs{
+  display:grid;grid-template-columns:1fr 1px 1fr;gap:0;
+  align-items:end;justify-items:center;margin:30px 0 8px;
+}
+.dc-fig{display:flex;flex-direction:column;align-items:center;gap:12px}
+.dc-fig img{
+  height:210px;width:auto;object-fit:contain;display:block;
+  filter:drop-shadow(0 6px 16px rgba(179,45,0,.16));
+}
+.dc-fig-label{
+  font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:600;
+  letter-spacing:3px;text-transform:uppercase;color:var(--accent);
+}
+.dc-divider{
+  width:1px;height:190px;align-self:center;
+  background:linear-gradient(to bottom,transparent,rgba(179,45,0,.35),transparent);
+}
+
+/* ── 6. BOTON "GUARDAR EN MI CALENDARIO" · legible ────────── */
+.btn-cal{
+  background:var(--dark)!important;
+  border:1.5px solid var(--dark)!important;
+  color:#FFF6E6!important;
+  font-size:14px!important;font-weight:700!important;
+  letter-spacing:2.2px;padding:15px 30px!important;
+  box-shadow:0 4px 18px rgba(179,45,0,.30);
+}
+.btn-cal:hover,.btn-cal:focus-visible{
+  background:#8f2200!important;border-color:#8f2200!important;color:#FFF6E6!important;
+}
+.btn-cal svg{fill:#FFF6E6}
+.btn-map{color:#FFF6E6!important;font-weight:700!important;font-size:14px!important}
+.btn-map svg{fill:#FFF6E6}
+.loc-cal-eyebrow{font-size:14px;color:var(--accent)}
+
+/* ── 7. ACCESIBILIDAD · sin movimiento si el sistema lo pide ─ */
+@media (prefers-reduced-motion:reduce){
+  .satin::before,.cd-box::after,.loc-card::after,.gift-card::after{animation:none;opacity:0}
+  .script-title,.footer-names,.quote-sig,.loc-name,
+  .hero-bride,.hero-groom{animation:none;background-position:50% 50%}
+}
+
+/* ── FAMILIA · champan satinado con vida propia ───────────── */
+#familia{
+  position:relative;z-index:0;isolation:isolate;overflow:hidden;
+  background:linear-gradient(to bottom,
+    var(--bg) 0%,#FBEFDC 12%,#F7E7CE 34%,#FDF6E9 52%,#F7E7CE 70%,#FBEFDC 88%,var(--bg) 100%)!important;
+}
+#familia::before{
+  content:'';position:absolute;inset:0;z-index:-2;pointer-events:none;
+  background:url('fondo3.jpg') center center/cover no-repeat;
+  opacity:.26;transform:scaleX(-1);
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 130px,#000 calc(100% - 130px),transparent 100%);
+          mask-image:linear-gradient(to bottom,transparent 0,#000 130px,#000 calc(100% - 130px),transparent 100%);
+}
+#familia::after{
+  content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse at center,
+    rgba(253,252,252,.62) 0%,rgba(253,252,252,.34) 60%,rgba(253,252,252,.10) 100%);
+}
+/* el satinado de familia es mas ancho y lento: se siente respirar, no destellar */
+.satin--familia::before{
+  width:62%;
+  background:linear-gradient(100deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,252,246,.34) 34%,
+    rgba(253,246,233,.70) 50%,
+    rgba(255,252,246,.34) 66%,
+    rgba(255,255,255,0) 100%);
+  animation-duration:12s;animation-delay:.8s;
+}
+
+/* ── INDICADOR "DESLIZA" · fijo abajo, se disuelve al deslizar ── */
+.scroll-hint{
+  position:fixed;
+  bottom:calc(20px + env(safe-area-inset-bottom,0px));
+  left:50%;transform:translateX(-50%);
+  z-index:900;
+  display:flex;flex-direction:column;align-items:center;gap:9px;
+  white-space:nowrap;pointer-events:none;
+  opacity:0;                      /* aparece cuando se abre el sobre */
+  transition:opacity .9s ease,transform .9s ease;
+  padding:11px 26px;
+  border-radius:50px;
+  background:rgba(253,252,252,.72);
+  -webkit-backdrop-filter:blur(7px);backdrop-filter:blur(7px);
+  box-shadow:0 4px 20px rgba(179,45,0,.13),inset 0 0 0 1px rgba(179,45,0,.16);
+}
+.scroll-hint.is-visible{opacity:1}
+.scroll-hint.hidden{opacity:0;transform:translateX(-50%) translateY(14px)}
+.scroll-hint-txt{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;
+  font-size:14px;letter-spacing:8px;padding-left:8px;
+  text-transform:uppercase;color:var(--dark);
+  display:flex;align-items:center;gap:12px;
+}
+.scroll-hint-arrow svg{width:22px;height:22px;stroke:var(--accent);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* ── RSVP · card estilo boda-jennifer ─────────────────────── */
+#rsvp{padding:78px 22px}
+.rsvp-card{
+  max-width:400px;margin:28px auto 0;position:relative;
+  background:rgba(255,255,255,.86);
+  -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+  border:1px solid rgba(179,45,0,.34);
+  padding:46px 26px 40px;
+  box-shadow:0 24px 64px rgba(143,34,0,.12),0 4px 20px rgba(179,45,0,.14);
+}
+.rsvp-card::before{content:"";position:absolute;inset:10px;border:1px solid rgba(179,45,0,.20);pointer-events:none}
+.rsvp-corner{position:absolute;width:44px;height:44px;pointer-events:none}
+.rsvp-corner--tl{top:0;left:0}
+.rsvp-corner--tr{top:0;right:0;transform:scaleX(-1)}
+.rsvp-corner--bl{bottom:0;left:0;transform:scaleY(-1)}
+.rsvp-corner--br{bottom:0;right:0;transform:scale(-1,-1)}
+.rsvp-inner{text-align:center;position:relative;z-index:1}
+.rsvp-ornament{display:block;margin:0 auto 20px;width:min(250px,72%);height:auto}
+.rsvp-title{font-size:44px;margin-bottom:14px}
+.rsvp-text{
+  font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:500;
+  color:var(--text);line-height:1.8;margin:0 auto 4px;max-width:320px;
+}
+.rsvp-text strong{color:var(--accent);font-weight:700}
+.rsvp-divider{display:flex;align-items:center;gap:14px;margin:22px auto 24px;max-width:280px}
+.rsvp-divider::before,.rsvp-divider::after{content:"";flex:1;height:1px;background:linear-gradient(to right,transparent,rgba(179,45,0,.45),transparent)}
+.rsvp-divider-heart{color:var(--accent);flex-shrink:0;opacity:.85}
+.rsvp-deadline-chip{
+  display:inline-flex;align-items:center;gap:8px;margin-top:24px;
+  font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:700;
+  letter-spacing:1.6px;color:var(--accent);
+}
+.rsvp-form-wrap{max-width:330px}
+
+/* la caja interna heredada ya no aplica dentro de la card */
+.rsvp-form-wrap{background:transparent!important;border:none!important;box-shadow:none!important;padding:0!important;margin:0 auto!important}
+/* el barrido satinado va DETRAS del texto de los botones */
+.btn-map::after,.btn-cal::after,.btn-wa::after,.btn-liverpool::after,.rsvp-submit::after{z-index:0}
+.btn-map,.btn-cal,.btn-wa,.rsvp-submit{isolation:isolate}
+.btn-map>*,.btn-cal>*,.btn-wa>*,.rsvp-submit>*{position:relative;z-index:1}
+.rsvp-submit{color:#FFF6E6!important}
+.rsvp-submit span{position:relative;z-index:1;color:#FFF6E6}
 </style>
 </head>
 <body>
@@ -641,12 +925,6 @@ body{font-weight:500}
       <span class="hero-bride rv">Nancy</span>
       <span class="hero-amp rv">&amp;</span>
       <span class="hero-groom rv">Vladimir</span>
-    </div>
-    <div class="scroll-hint" id="scrollHint">
-      <span class="scroll-hint-txt">Desliza</span>
-      <span class="scroll-hint-arrow">
-        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-      </span>
     </div>
   </section>
 
@@ -698,6 +976,7 @@ body{font-weight:500}
 
   <!-- ── 3. CUENTA REGRESIVA ── -->
   <section id="countdown" class="sec sec--surface">
+    <div class="satin" aria-hidden="true"></div>
     <p class="eyebrow rv">Faltan</p>
     <h2 class="script-title rv">Cuenta Regresiva</h2>
     <div class="cd-grid">
@@ -722,13 +1001,14 @@ body{font-weight:500}
   <!-- ── 4. FRASE ROMÁNTICA ── -->
   <section id="quote" class="sec sec--bg">
     <p class="quote-txt rv">
-      &ldquo;Hay amores que el tiempo afirma y el destino sella; el nuestro es de esos que no buscan explicación — simplemente suceden.&rdquo;
+      Después de un hermoso camino juntos, hemos decidido unir nuestras vidas ante Dios y nuestros seres queridos. Nos casamos, y queremos compartir este día tan especial con ustedes.
     </p>
     <span class="quote-sig rv">Nancy &amp; Vladimir</span>
   </section>
 
   <!-- ── 5. FAMILIA ── -->
   <section id="familia" class="sec">
+    <div class="satin satin--familia" aria-hidden="true"></div>
     <div class="ornament rv" style="padding:0 0 8px;background:transparent;">
       <svg viewBox="0 0 360 64" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g opacity=".5" stroke="#b32d00">
@@ -821,6 +1101,7 @@ body{font-weight:500}
 
   <!-- ── 7. UBICACIÓN ── -->
   <section id="ubicacion" class="sec sec--surface">
+    <div class="satin" aria-hidden="true"></div>
     <p class="eyebrow rv">Dónde Celebramos</p>
     <h2 class="script-title rv">Ubicación</h2>
 
@@ -938,6 +1219,7 @@ body{font-weight:500}
 
   <!-- ── 9. DRESS CODE ── -->
   <section id="dresscode" class="sec sec--surface">
+    <div class="satin" aria-hidden="true"></div>
     <p class="eyebrow rv">Etiqueta</p>
     <h2 class="script-title rv">Dress Code</h2>
     <p class="dc-subtitle rv">Formal &middot; Casual</p>
@@ -950,20 +1232,25 @@ body{font-weight:500}
         <span class="dc-dot" style="background:#ef0101"></span>
       </div>
     </div>
+    <div class="dc-figs rv">
+      <figure class="dc-fig">
+        <img src="dama.png" alt="Vestimenta sugerida para dama: vestido largo formal" loading="lazy" width="205" height="500">
+        <figcaption class="dc-fig-label">Damas</figcaption>
+      </figure>
+      <div class="dc-divider"></div>
+      <figure class="dc-fig">
+        <img src="caballero.png" alt="Vestimenta sugerida para caballero: camisa, chaleco y pantalón" loading="lazy" width="304" height="620">
+        <figcaption class="dc-fig-label">Caballeros</figcaption>
+      </figure>
+    </div>
     <p class="dc-note rv" style="margin-top:22px">Pero lo más importante es tu presencia y tu sonrisa.</p>
 
 
   </section>
 
-  <!-- ── 10. NUESTRA HISTORIA ── -->
-  <section id="galeria">
-    <p class="eyebrow rv">Nuestro camino</p>
-    <h2 class="script-title rv">Nuestra Historia</h2>
-    <p class="historia-txt rv">Después de un hermoso camino juntos, hemos decidido unir nuestras vidas ante Dios y nuestros seres queridos. Nos casamos, y queremos compartir este día tan especial con ustedes.</p>
-  </section>
-
   <!-- ── 12. ÁLBUM COMPARTIDO ── -->
   <section id="album">
+    <div class="satin" aria-hidden="true"></div>
     <div class="ornament rv" style="padding:0 0 8px;background:transparent;">
       <svg viewBox="0 0 360 64" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g opacity=".5" stroke="#b32d00">
@@ -981,26 +1268,16 @@ body{font-weight:500}
     </div>
     <p class="eyebrow rv">Comparte el Momento</p>
     <h2 class="script-title rv">Álbum Compartido</h2>
-    <p class="album-note rv">¡Queremos ver la boda a través de tus ojos! Muy pronto compartiremos aquí el código para que subas tus fotos al álbum de Nancy &amp; Vladimir.</p>
+    <p class="album-note rv">¡Queremos ver la boda a través de tus ojos! Escanea el código y sube tus fotos al álbum de Nancy &amp; Vladimir.</p>
     <!-- PENDIENTE: link del álbum compartido -->
     <div class="album-qr-wrap rv">
-      <div class="qr-soon" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5z"/><path d="M13 13h3v3h-3v-3zm5 0h3v3h-3v-3zm-5 5h3v3h-3v-3zm5 0h3v3h-3v-3z"/></svg>
-      </div>
-      <span class="qr-label">Código QR próximamente</span>
-    </div>
-  </section>
-
-  <!-- ── 13. NO NIÑOS ── -->
-  <section id="noninos">
-    <svg class="nn-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm-7 9a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5a1.5 1.5 0 0 1-3 0v-3h-1v7.5a1.5 1.5 0 0 1-3 0V16h-1v4.5a1.5 1.5 0 0 1-3 0V13H7v3a1.5 1.5 0 0 1-3 0v-5z"/></svg>
-    <p class="eyebrow rv">Con todo cariño</p>
-    <h2 class="script-title rv">Solo Adultos</h2>
-    <p class="nn-note rv">Amamos a los pequeños, pero hemos decidido que esta celebración sea solo para adultos. Agradecemos su comprensión y esperamos que puedan disfrutar la noche con nosotros.</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=360x360&amp;color=b32d00&amp;bgcolor=fdfcfc&amp;margin=18&amp;data=https%3A%2F%2Fboda-nancy-y-vladimir.vercel.app%2Falbum" alt="Código QR del álbum de fotos de Nancy y Vladimir">
+      <span class="qr-label">Escanea para subir tus fotos</span></div>
   </section>
 
   <!-- ── 14. MESA DE REGALOS ── -->
   <section id="regalos">
+    <div class="satin" aria-hidden="true"></div>
     <p class="eyebrow rv">Nuestro mejor regalo</p>
     <h2 class="script-title rv">Obsequios</h2>
     <div class="gift-card rv">
@@ -1010,22 +1287,54 @@ body{font-weight:500}
 
   <!-- ── 15. RSVP ── -->
   <section id="rsvp">
-    <p class="eyebrow rv">Tu compañía lo es todo</p>
-    <h2 class="script-title rv">Confirma tu Asistencia</h2>
-    <p class="rsvp-deadline rv">Te pedimos confirmar antes del 22 de enero de 2027</p>
-    <div class="rsvp-form-wrap rv">
-      <p class="rsvp-para-note" id="rsvpParaNote" style="display:none"></p>
-      <div class="rsvp-pases-badge" id="rsvpPasesBadge" style="display:none"></div>
-      <div class="rsvp-toggle">
-        <button class="rsvp-toggle-btn" id="rsvpBtnYes" type="button">Asistiré</button>
-        <button class="rsvp-toggle-btn" id="rsvpBtnNo" type="button">No podré asistir</button>
+    <div class="satin" aria-hidden="true"></div>
+    <div class="rsvp-card rv">
+      <svg class="rsvp-corner rsvp-corner--tl" viewBox="0 0 52 52" fill="none" aria-hidden="true"><path d="M2 50 L2 2 L50 2" stroke="var(--accent)" stroke-width=".9" opacity=".6"/><circle cx="2" cy="2" r="2.5" fill="var(--accent)" opacity=".5"/></svg>
+      <svg class="rsvp-corner rsvp-corner--tr" viewBox="0 0 52 52" fill="none" aria-hidden="true"><path d="M2 50 L2 2 L50 2" stroke="var(--accent)" stroke-width=".9" opacity=".6"/><circle cx="2" cy="2" r="2.5" fill="var(--accent)" opacity=".5"/></svg>
+      <svg class="rsvp-corner rsvp-corner--bl" viewBox="0 0 52 52" fill="none" aria-hidden="true"><path d="M2 50 L2 2 L50 2" stroke="var(--accent)" stroke-width=".9" opacity=".6"/><circle cx="2" cy="2" r="2.5" fill="var(--accent)" opacity=".5"/></svg>
+      <svg class="rsvp-corner rsvp-corner--br" viewBox="0 0 52 52" fill="none" aria-hidden="true"><path d="M2 50 L2 2 L50 2" stroke="var(--accent)" stroke-width=".9" opacity=".6"/><circle cx="2" cy="2" r="2.5" fill="var(--accent)" opacity=".5"/></svg>
+      <div class="rsvp-inner">
+        <svg class="rsvp-ornament" viewBox="0 0 320 56" fill="none" aria-hidden="true">
+            <g stroke="var(--accent)" stroke-width=".9" opacity=".8" fill="none">
+              <path d="M18 28 Q50 10 82 28 Q106 42 130 28"/>
+              <path d="M190 28 Q214 42 238 28 Q270 10 302 28"/>
+              <circle cx="160" cy="28" r="5.5"/>
+              <circle cx="160" cy="28" r="2" fill="var(--accent)" stroke="none"/>
+              <path d="M148 28 L154 28" opacity=".5"/>
+              <path d="M166 28 L172 28" opacity=".5"/>
+              <path d="M154 20 Q160 13 166 20" opacity=".55"/>
+              <path d="M154 36 Q160 43 166 36" opacity=".55"/>
+            </g>
+          </svg>
+        <p class="eyebrow">Tu compañía lo es todo</p>
+        <h2 class="script-title rsvp-title">Confirma tu Asistencia</h2>
+        <p class="rsvp-text">Te pedimos confirmar antes del <strong>22 de enero de 2027</strong>. Nos hace mucha ilusión saber que estarás con nosotros.</p>
+
+        <p class="rsvp-para-note" id="rsvpParaNote" style="display:none"></p>
+        <div class="rsvp-pases-badge" id="rsvpPasesBadge" style="display:none"></div>
+
+        <div class="rsvp-divider">
+          <svg class="rsvp-divider-heart" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+        </div>
+
+        <div class="rsvp-form-wrap">
+          <div class="rsvp-toggle">
+            <button class="rsvp-toggle-btn" id="rsvpBtnYes" type="button">Asistiré</button>
+            <button class="rsvp-toggle-btn" id="rsvpBtnNo" type="button">No podré asistir</button>
+          </div>
+          <p class="rsvp-names-hint" id="rsvpNamesHint" style="display:none"></p>
+          <div class="rsvp-names-wrap" id="rsvpNamesWrap" style="display:none"></div>
+          <button type="button" id="rsvpSubmitBtn" class="rsvp-submit">
+            <span id="rsvpBtnText">Confirmar asistencia</span>
+          </button>
+          <p id="rsvp-feedback"></p>
+        </div>
+
+        <div class="rsvp-deadline-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5z"/></svg>
+          Fecha límite · 22 de enero de 2027
+        </div>
       </div>
-      <p class="rsvp-names-hint" id="rsvpNamesHint" style="display:none"></p>
-      <div class="rsvp-names-wrap" id="rsvpNamesWrap" style="display:none"></div>
-      <button type="button" id="rsvpSubmitBtn" class="rsvp-submit">
-        <span id="rsvpBtnText">Confirmar asistencia</span>
-      </button>
-      <p id="rsvp-feedback"></p>
     </div>
   </section>
 
@@ -1059,6 +1368,13 @@ body{font-weight:500}
     <svg class="vinyl-icon-pause" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
   </div>
 </button>
+
+<div class="scroll-hint" id="scrollHint" aria-hidden="true">
+  <span class="scroll-hint-txt">Desliza</span>
+  <span class="scroll-hint-arrow">
+    <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+  </span>
+</div>
 
 <div id="env-flash"></div>
 
@@ -1507,10 +1823,29 @@ function initAll(){
 
   if(!window.__rsvpReady){ window.__rsvpReady=true; initRSVP(); }
 
+  // ── indicador "Desliza": aparece al abrir la invitación y se
+  //    disuelve en cuanto el invitado desliza (una sola vez)
   const scrollHint=document.getElementById('scrollHint');
-  if(scrollHint){
-    const hideHint=()=>{scrollHint.classList.add('hidden');window.removeEventListener('scroll',hideHint);};
-    window.addEventListener('scroll',hideHint,{passive:true});
+  if(scrollHint && !window.__hintReady){
+    window.__hintReady=true;
+    // entra con calma, ya con la invitación a la vista
+    setTimeout(function(){
+      if(!scrollHint.classList.contains('hidden')) scrollHint.classList.add('is-visible');
+    }, 900);
+    const hideHint=function(){
+      scrollHint.classList.remove('is-visible');
+      scrollHint.classList.add('hidden');
+      window.removeEventListener('scroll',hideHint);
+      window.removeEventListener('touchmove',hideHint);
+      window.removeEventListener('wheel',hideHint);
+      // fuera del DOM cuando termine el fundido
+      setTimeout(function(){ scrollHint.style.display='none'; }, 1000);
+    };
+    window.addEventListener('scroll',hideHint,{passive:true,once:true});
+    window.addEventListener('touchmove',hideHint,{passive:true,once:true});
+    window.addEventListener('wheel',hideHint,{passive:true,once:true});
+    // si nadie desliza, a los 12 s se retira solo para no estorbar
+    setTimeout(function(){ if(!scrollHint.classList.contains('hidden')) hideHint(); }, 12000);
   }
   ScrollTrigger.refresh();
   if(typeof window._startAudio==='function') window._startAudio();
