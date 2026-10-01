@@ -892,6 +892,22 @@ body{font-weight:500}
 .btn-map>*,.btn-cal>*,.btn-wa>*,.rsvp-submit>*{position:relative;z-index:1}
 .rsvp-submit{color:#FFF6E6!important}
 .rsvp-submit span{position:relative;z-index:1;color:#FFF6E6}
+
+/* == HERO v2: marco floral con los novios de espaldas ==
+   La imagen va anclada ARRIBA y en cover; el centro del marco cae al 32.3%
+   del alto de la imagen. Segun mande el alto o el ancho del hero, eso es
+   32.3cqh o 57.9cqw: max() elige el correcto y los nombres no se salen
+   del marco en ninguna pantalla. */
+#hero{container-type:size;display:block}
+.hero-bg{background:url('hero-novios.jpg') center top/cover no-repeat;background-color:#fdfaf4}
+.hero-veil{background:linear-gradient(to bottom,rgba(253,252,252,0) 0%,rgba(253,252,252,0) 88%,var(--bg) 100%)}
+.hero-content{
+  position:absolute;left:50%;top:32.3%;top:max(32.3cqh,57.9cqw);
+  transform:translate(-50%,-50%);
+  width:max(62cqw,34.6cqh);max-width:none;margin:0;padding:0;
+}
+.hero-bride,.hero-groom{font-size:clamp(44px,14vw,60px);font-size:clamp(44px,max(14cqw,7.8cqh),64px)}
+.hero-amp{font-size:30px;margin:.02em 0}
 </style>
 </head>
 <body>
@@ -1238,7 +1254,7 @@ body{font-weight:500}
       </figure>
       <div class="dc-divider"></div>
       <figure class="dc-fig">
-        <img src="caballero.png" alt="Vestimenta sugerida para caballero: camisa, chaleco y pantalón" loading="lazy" width="304" height="620">
+        <img src="caballero.png" alt="Vestimenta sugerida para caballero: saco azul marino, camisa y pantalón" loading="lazy" width="201" height="640">
         <figcaption class="dc-fig-label">Caballeros</figcaption>
       </figure>
     </div>
